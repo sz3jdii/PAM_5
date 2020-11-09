@@ -48,9 +48,20 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Snackbar.make(getWindow().getDecorView(), "Ustawienia", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
             return true;
         }
 
+        if (id == R.id.action_first) {
+            Snackbar.make(findViewById(R.id.fab), "First snackbar", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        }
+
+        if (id == R.id.action_second) {
+            Snackbar.make(findViewById(R.id.fab), "Second snackbar", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        }
         return super.onOptionsItemSelected(item);
     }
 }
